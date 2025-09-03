@@ -1,0 +1,45 @@
+*/Inicio
+  Leer n
+  Si n <= 1 entonces
+    No es primo
+  Sino
+    Para i desde 2 hasta raíz de n
+      Si n módulo i == 0 entonces
+        No es primo
+        Salir del ciclo
+    Fin Para
+    Si no se encontró divisor
+      Es primo
+Fin
+*/
+
+
+#include <stdio.h>
+#include <math.h>  // Necesario para sqrt()
+
+int main(void) {
+    int n, i, esPrimo = 1;
+
+    printf("Introduce un número entero positivo: ");
+    scanf("%d", &n);
+
+    if (n <= 1) {
+        esPrimo = 0;
+    } else {
+        for (i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                esPrimo = 0;
+                break;
+            }
+        }
+    }
+
+    if (esPrimo)
+        printf("%d es un número primo.\n", n);
+    else
+        printf("%d NO es un número primo.\n", n);
+
+    return 0;
+}
+
+

@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void){
+int dias;
+int horas;	
+printf("ingrese un  numero de dias");
+
+scanf("%d", &dias);
+horas = dias * 24
+
+printf("el numoero de horas es", horas);
+
+
+return 0;
+}

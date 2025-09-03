@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int es_bisiesto(int year) {
+    return (year % 400 == 0) ||
+           (year % 4 == 0 && year % 100 != 0);
+}
+
+int main(void) {
+    int year;
+
+    printf("Introduce un a\u00f1o: ");
+    scanf("%d", &year);
+
+    if (year % 4 == 0) {
+        if (year % 100 != 0) {
+            printf("%d es un a\u00f1o bisiesto.\n", year);
+        }
+        else if (year % 400 == 0) {
+            printf("%d es un a\u00f1o bisiesto.\n", year);
+        }
+        else {
+            printf("%d NO es un a\u00f1o bisiesto.\n", year);
+        }
+    }
+    else {
+        printf("%d NO es un a\u00f1o bisiesto.\n", year);
+    }
+
+    return 0;
+}
